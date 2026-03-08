@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "title": "Holi Festival of Colours",
+    "date": "2026-03-21",
+    "time": "2:00 PM – 6:00 PM",
+    "location": "Odell Park, Fredericton, NB",
+    "description": "Join us for a vibrant celebration of Holi! Enjoy colours, music, traditional sweets, and community spirit in the heart of Fredericton.",
+    "category": "Cultural",
+    "image": "🎨",
+    "register": "https://forms.google.com"
+  },
+  {
+    "id": 2,
+    "title": "Diwali Night Gala 2026",
+    "date": "2026-10-20",
+    "time": "6:00 PM – 11:00 PM",
+    "location": "Delta Hotels, Fredericton, NB",
+    "description": "Celebrate the Festival of Lights with dance performances, traditional cuisine, a cultural show, and fireworks. Black-tie welcome!",
+    "category": "Gala",
+    "image": "🪔",
+    "register": "https://forms.google.com"
+  },
+  {
+    "id": 3,
+    "title": "Newcomers Welcome Orientation",
+    "date": "2026-04-05",
+    "time": "10:00 AM – 1:00 PM",
+    "location": "Fredericton Public Library, NB",
+    "description": "A warm welcome session for new Indo-Canadian arrivals. Learn about local resources, settlement services, healthcare, schools, and connect with our community.",
+    "category": "Community",
+    "image": "🤝",
+    "register": "https://forms.google.com"
+  },
+  {
+    "id": 4,
+    "title": "Classical Indian Dance Workshop",
+    "date": "2026-05-10",
+    "time": "11:00 AM – 3:00 PM",
+    "location": "AIC Community Hall, Fredericton",
+    "description": "An interactive Bharatanatyam and Kathak workshop for all ages. No experience required — just bring your enthusiasm!",
+    "category": "Arts",
+    "image": "💃",
+    "register": "https://forms.google.com"
+  },
+  {
+    "id": 5,
+    "title": "Canada Day Indo-Canadian Picnic",
+    "date": "2026-07-01",
+    "time": "12:00 PM – 5:00 PM",
+    "location": "Wilmot Park, Fredericton, NB",
+    "description": "A family-friendly picnic celebrating our dual heritage — proudly Canadian, proudly Indian. Expect cricket, food, and great company!",
+    "category": "Community",
+    "image": "🍁",
+    "register": "https://forms.google.com"
+  },
+  {
+    "id": 6,
+    "title": "Youth Leadership Summit",
+    "date": "2026-08-15",
+    "time": "9:00 AM – 4:00 PM",
+    "location": "University of New Brunswick, Fredericton",
+    "description": "A full-day summit for Indo-Canadian youth featuring guest speakers, mentorship sessions, career panels, and networking.",
+    "category": "Education",
+    "image": "🎓",
+    "register": "https://forms.google.com"
+  }
+]
