@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "id": 2,
     "title": "AIC Movie Marathon Saturday",
     "date": "2026-03-14",
     "time": "10:00 AM – 10:00 PM",
@@ -11,7 +11,7 @@
     "register": "https://forms.gle/Vo6q8BYA4eKsN9mm9"
   },
   {
-    "id": 2,
+    "id": 3,
     "title": "AIC Movie Marathon Sunday",
     "date": "2026-03-15",
     "time": "10:00 AM – 10:00 PM",
@@ -22,7 +22,7 @@
     "register": "https://forms.gle/Vo6q8BYA4eKsN9mm9"
   },
   {
-    "id": 3,
+    "id": 4,
     "title": "Diwali Night Gala 2026",
     "date": "2026-11-08",
     "time": "6:00 PM – 11:00 PM",
@@ -33,7 +33,7 @@
     "register": "https://forms.gle/nLbtDmwRNRitQPPi6"
   },
   {
-    "id": 4,
+    "id": 5,
     "title": "Newcomers Welcome Orientation",
     "date": "2026-04-05",
     "time": "10:00 AM – 1:00 PM",
@@ -44,7 +44,7 @@
     "register": "https://forms.gle/eHYppgB8nDKNmzwC7"
   },
   {
-    "id": 5,
+    "id": 6,
     "title": "Classical Indian Dance Workshop",
     "date": "2026-05-10",
     "time": "11:00 AM – 3:00 PM",
@@ -55,7 +55,7 @@
     "register": "https://forms.gle/eHYppgB8nDKNmzwC7m"
   },
   {
-    "id": 6,
+    "id": 7,
     "title": "Canada Day Indo-Canadian Picnic",
     "date": "2026-07-01",
     "time": "12:00 PM – 5:00 PM",
@@ -66,7 +66,7 @@
     "register": "https://forms.gle/eHYppgB8nDKNmzwC7"
   },
   {
-    "id": 7,
+    "id": 8,
     "title": "Youth Leadership Summit",
     "date": "2026-08-15",
     "time": "9:00 AM – 4:00 PM",
@@ -77,7 +77,7 @@
     "register": "https://forms.gle/eHYppgB8nDKNmzwC7"
   },
   {
-    "id": 8,
+    "id": 9,
     "title": "AIC Killarney Lake Park Summer Party",
     "date": "2026-07-18",
     "time": "6:00 AM – 8:00 PM",
