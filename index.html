@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Association of Indo-Canadians – Fredericton</title>
-  <meta name="description" content="AIC Fredericton – Fostering a vibrant, inclusive, and engaged Indo-Canadian community in New Brunswick." />
+  <meta name="description"
+    content="AIC Fredericton – Fostering a vibrant, inclusive, and engaged Indo-Canadian community in New Brunswick." />
   <link rel="icon" href="assets/logo.jpeg" type="image/jpeg" />
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700;900&family=DM+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -25,23 +29,53 @@
       --charcoal: #1C1C1E;
     }
 
-    * { box-sizing: border-box; scroll-behavior: smooth; }
-    body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--charcoal); margin: 0; overflow-x: hidden; }
-    h1,h2,h3,h4 { font-family: 'Playfair Display', serif; }
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--charcoal);
+      margin: 0;
+      overflow-x: hidden;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: 'Playfair Display', serif;
+    }
 
     /* NAV */
     #navbar {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
       transition: all 0.4s ease;
       background: transparent;
     }
+
     #navbar.scrolled {
-      background: rgba(255,255,255,0.97);
-      box-shadow: 0 2px 24px rgba(0,0,0,0.10);
+      background: rgba(255, 255, 255, 0.97);
+      box-shadow: 0 2px 24px rgba(0, 0, 0, 0.10);
     }
-    #navbar.scrolled .nav-link { color: var(--charcoal) !important; }
-    #navbar.scrolled .logo-text { color: var(--charcoal) !important; }
-    #navbar.scrolled #hamburger span { background: var(--charcoal) !important; }
+
+    #navbar.scrolled .nav-link {
+      color: var(--charcoal) !important;
+    }
+
+    #navbar.scrolled .logo-text {
+      color: var(--charcoal) !important;
+    }
+
+    #navbar.scrolled #hamburger span {
+      background: var(--charcoal) !important;
+    }
 
     .nav-link {
       color: white;
@@ -53,598 +87,836 @@
       position: relative;
       transition: color 0.2s;
     }
+
     .nav-link::after {
-      content: ''; position: absolute; bottom: 0; left: 0; right: 0;
-      height: 2px; background: var(--saffron); transform: scaleX(0);
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--saffron);
+      transform: scaleX(0);
       transition: transform 0.25s ease;
     }
-    .nav-link:hover::after { transform: scaleX(1); }
+
+    .nav-link:hover::after {
+      transform: scaleX(1);
+    }
 
     /* HERO */
     #hero {
       min-height: 100vh;
       background: linear-gradient(135deg, #0a0010 0%, #1a0a00 40%, #001400 100%);
       position: relative;
-      display: flex; align-items: center; justify-content: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       overflow: hidden;
     }
+
     .hero-mandala {
-      position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-      width: 700px; height: 700px; opacity: 0.07;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 700px;
+      height: 700px;
+      opacity: 0.07;
       border-radius: 50%;
       border: 2px solid var(--saffron);
       animation: rotSlow 60s linear infinite;
     }
+
     .hero-mandala::before {
-      content: ''; position: absolute; inset: 30px;
-      border-radius: 50%; border: 1px solid var(--india-green);
+      content: '';
+      position: absolute;
+      inset: 30px;
+      border-radius: 50%;
+      border: 1px solid var(--india-green);
       animation: rotSlow 30s linear infinite reverse;
     }
+
     .hero-mandala::after {
-      content: ''; position: absolute; inset: 80px;
-      border-radius: 50%; border: 1px dashed var(--saffron);
+      content: '';
+      position: absolute;
+      inset: 80px;
+      border-radius: 50%;
+      border: 1px dashed var(--saffron);
     }
-    @keyframes rotSlow { to { transform: translate(-50%,-50%) rotate(360deg); } }
+
+    @keyframes rotSlow {
+      to {
+        transform: translate(-50%, -50%) rotate(360deg);
+      }
+    }
 
     .flag-stripe {
-      position: absolute; left: 0; right: 0; height: 4px; opacity: 0.6;
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 4px;
+      opacity: 0.6;
     }
-    .flag-saffron { background: var(--saffron); top: 0; }
-    .flag-white   { background: white; top: 4px; }
-    .flag-green   { background: var(--india-green); top: 8px; }
+
+    .flag-saffron {
+      background: var(--saffron);
+      top: 0;
+    }
+
+    .flag-white {
+      background: white;
+      top: 4px;
+    }
+
+    .flag-green {
+      background: var(--india-green);
+      top: 8px;
+    }
 
     .hero-badge {
       display: inline-block;
-      border: 1px solid rgba(255,153,51,0.4);
+      border: 1px solid rgba(255, 153, 51, 0.4);
       color: var(--saffron-light);
-      padding: 6px 20px; border-radius: 999px;
-      font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase;
+      padding: 6px 20px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
       margin-bottom: 24px;
       animation: fadeUp 0.8s 0.2s both;
     }
-    .hero-title { animation: fadeUp 0.8s 0.4s both; }
-    .hero-sub   { animation: fadeUp 0.8s 0.6s both; }
-    .hero-btns  { animation: fadeUp 0.8s 0.8s both; }
-    .hero-logo  { animation: fadeUp 0.8s 0.1s both; }
+
+    .hero-title {
+      animation: fadeUp 0.8s 0.4s both;
+    }
+
+    .hero-sub {
+      animation: fadeUp 0.8s 0.6s both;
+    }
+
+    .hero-btns {
+      animation: fadeUp 0.8s 0.8s both;
+    }
+
+    .hero-logo {
+      animation: fadeUp 0.8s 0.1s both;
+    }
 
     @keyframes fadeUp {
-      from { opacity:0; transform: translateY(30px); }
-      to   { opacity:1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .btn-saffron {
-      background: var(--saffron); color: white;
-      padding: 14px 36px; border-radius: 999px;
-      font-weight: 600; font-size: 0.95rem;
-      text-decoration: none; display: inline-block;
-      transition: all 0.25s; border: none; cursor: pointer;
-      box-shadow: 0 4px 20px rgba(255,153,51,0.4);
+      background: var(--saffron);
+      color: white;
+      padding: 14px 36px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.25s;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 20px rgba(255, 153, 51, 0.4);
     }
-    .btn-saffron:hover { background: var(--saffron-dark); transform: translateY(-2px); box-shadow: 0 8px 28px rgba(255,153,51,0.5); }
+
+    .btn-saffron:hover {
+      background: var(--saffron-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(255, 153, 51, 0.5);
+    }
 
     .btn-outline {
-      border: 2px solid rgba(255,255,255,0.5); color: white;
-      padding: 12px 36px; border-radius: 999px;
-      font-weight: 500; font-size: 0.95rem;
-      text-decoration: none; display: inline-block;
-      transition: all 0.25s; cursor: pointer;
+      border: 2px solid rgba(255, 255, 255, 0.5);
+      color: white;
+      padding: 12px 36px;
+      border-radius: 999px;
+      font-weight: 500;
+      font-size: 0.95rem;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.25s;
+      cursor: pointer;
       background: transparent;
     }
-    .btn-outline:hover { border-color: white; background: rgba(255,255,255,0.1); }
+
+    .btn-outline:hover {
+      border-color: white;
+      background: rgba(255, 255, 255, 0.1);
+    }
 
     /* SECTIONS */
     .section-label {
-      font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase;
-      color: var(--saffron); font-weight: 600; margin-bottom: 12px;
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--saffron);
+      font-weight: 600;
+      margin-bottom: 12px;
     }
+
     .section-title {
-      font-size: clamp(2rem, 4vw, 3rem); color: var(--charcoal); line-height: 1.2;
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: var(--charcoal);
+      line-height: 1.2;
     }
+
     .divider {
-      width: 60px; height: 4px; border-radius: 2px;
+      width: 60px;
+      height: 4px;
+      border-radius: 2px;
       background: linear-gradient(to right, var(--saffron), var(--india-green));
       margin: 20px 0 32px;
     }
 
     /* ABOUT CARDS */
     .value-card {
-      background: white; border-radius: 20px;
-      padding: 32px; border: 1px solid #f0ece0;
-      box-shadow: 0 2px 16px rgba(0,0,0,0.05);
+      background: white;
+      border-radius: 20px;
+      padding: 32px;
+      border: 1px solid #f0ece0;
+      box-shadow: 0 2px 16px rgba(0, 0, 0, 0.05);
       transition: all 0.3s;
     }
-    .value-card:hover { transform: translateY(-6px); box-shadow: 0 12px 40px rgba(0,0,0,0.10); }
+
+    .value-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.10);
+    }
+
     .value-icon {
-      width: 56px; height: 56px; border-radius: 14px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.5rem; margin-bottom: 16px;
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 16px;
     }
 
     /* EVENTS */
     .event-card {
-      background: white; border-radius: 20px;
+      background: white;
+      border-radius: 20px;
       border: 1px solid #f0ece0;
       overflow: hidden;
       transition: all 0.3s;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
     }
-    .event-card:hover { transform: translateY(-6px); box-shadow: 0 16px 48px rgba(0,0,0,0.12); }
-    .event-header { padding: 28px; border-bottom: 1px solid #f0ece0; }
-    .event-emoji { font-size: 2.5rem; margin-bottom: 12px; }
+
+    .event-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
+    }
+
+    .event-header {
+      padding: 28px;
+      border-bottom: 1px solid #f0ece0;
+    }
+
+    .event-emoji {
+      font-size: 2.5rem;
+      margin-bottom: 12px;
+    }
+
     .event-category {
-      display: inline-block; padding: 4px 14px; border-radius: 999px;
-      font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+      display: inline-block;
+      padding: 4px 14px;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
     }
-    .cat-Cultural  { background: #FFF3E0; color: #E07A00; }
-    .cat-Gala      { background: #FCE4EC; color: #C2185B; }
-    .cat-Community { background: #E8F5E9; color: #2E7D32; }
-    .cat-Arts      { background: #EDE7F6; color: #512DA8; }
-    .cat-Education { background: #E3F2FD; color: #1565C0; }
+
+    .cat-Cultural {
+      background: #FFF3E0;
+      color: #E07A00;
+    }
+
+    .cat-Gala {
+      background: #FCE4EC;
+      color: #C2185B;
+    }
+
+    .cat-Community {
+      background: #E8F5E9;
+      color: #2E7D32;
+    }
+
+    .cat-Arts {
+      background: #EDE7F6;
+      color: #512DA8;
+    }
+
+    .cat-Education {
+      background: #E3F2FD;
+      color: #1565C0;
+    }
 
     /* HERITAGE */
     .heritage-item {
-      display: flex; gap: 20px; align-items: flex-start;
-      padding: 24px; background: white; border-radius: 16px;
-      border: 1px solid #f0ece0; transition: all 0.25s;
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      padding: 24px;
+      background: white;
+      border-radius: 16px;
+      border: 1px solid #f0ece0;
+      transition: all 0.25s;
     }
-    .heritage-item:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.08); transform: translateX(4px); }
+
+    .heritage-item:hover {
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+      transform: translateX(4px);
+    }
 
     /* STATS */
     .stat-number {
       font-family: 'Playfair Display', serif;
-      font-size: 3rem; font-weight: 900;
+      font-size: 3rem;
+      font-weight: 900;
       background: linear-gradient(135deg, var(--saffron), var(--india-green));
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     /* FORM */
     .form-input {
-      width: 100%; padding: 14px 18px; border-radius: 12px;
-      border: 1.5px solid #e0d8c8; background: white;
-      font-size: 0.95rem; font-family: 'DM Sans', sans-serif;
-      transition: border-color 0.2s; outline: none;
+      width: 100%;
+      padding: 14px 18px;
+      border-radius: 12px;
+      border: 1.5px solid #e0d8c8;
+      background: white;
+      font-size: 0.95rem;
+      font-family: 'DM Sans', sans-serif;
+      transition: border-color 0.2s;
+      outline: none;
     }
-    .form-input:focus { border-color: var(--saffron); box-shadow: 0 0 0 3px rgba(255,153,51,0.12); }
+
+    .form-input:focus {
+      border-color: var(--saffron);
+      box-shadow: 0 0 0 3px rgba(255, 153, 51, 0.12);
+    }
 
     /* FOOTER */
-    footer { background: var(--charcoal); }
+    footer {
+      background: var(--charcoal);
+    }
 
     /* MOBILE NAV */
     #mobile-menu {
-      display: none; position: fixed; inset: 0; z-index: 90;
-      background: rgba(28,28,30,0.98);
-      flex-direction: column; align-items: center; justify-content: center; gap: 32px;
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 90;
+      background: rgba(28, 28, 30, 0.98);
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
     }
-    #mobile-menu.open { display: flex; }
-    #mobile-menu a { color: white; font-size: 1.4rem; font-family: 'Playfair Display', serif; text-decoration: none; }
+
+    #mobile-menu.open {
+      display: flex;
+    }
+
+    #mobile-menu a {
+      color: white;
+      font-size: 1.4rem;
+      font-family: 'Playfair Display', serif;
+      text-decoration: none;
+    }
 
     /* SCROLL REVEAL */
-    .reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.7s ease, transform 0.7s ease; }
-    .reveal.visible { opacity: 1; transform: none; }
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
 
     /* TABS */
-    .tab-btn { 
-      padding: 10px 24px; border-radius: 999px; cursor: pointer;
-      font-weight: 500; transition: all 0.2s; border: none;
-      background: transparent; color: #6b6b6b;
+    .tab-btn {
+      padding: 10px 24px;
+      border-radius: 999px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: all 0.2s;
+      border: none;
+      background: transparent;
+      color: #6b6b6b;
     }
-    .tab-btn.active { background: var(--saffron); color: white; }
+
+    .tab-btn.active {
+      background: var(--saffron);
+      color: white;
+    }
 
     /* Ashoka Wheel */
-    .ashoka { display: inline-block; color: var(--navy); font-size: 1.2rem; }
+    .ashoka {
+      display: inline-block;
+      color: var(--navy);
+      font-size: 1.2rem;
+    }
   </style>
 </head>
+
 <body>
 
-<!-- NAV -->
-<nav id="navbar">
-  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-    <a href="#hero" class="flex items-center gap-3">
-      <img src="assets/logo.jpeg" alt="AIC Logo" class="w-10 h-10 rounded-full object-cover ring-2 ring-white/30" />
-      <span class="logo-text text-white font-semibold text-sm leading-tight hidden sm:block">
-        Association of<br><span style="color:var(--saffron)">Indo-Canadians</span>
-      </span>
-    </a>
-    <div class="hidden md:flex items-center gap-8">
-      <a href="#about"     class="nav-link">About</a>
-      <a href="#events"    class="nav-link">Events</a>
-      <a href="#heritage"  class="nav-link">Heritage</a>
-      <a href="#get-involved" class="nav-link">Get Involved</a>
-      <a href="#contact"   class="nav-link">Contact</a>
-      <a href="#get-involved" class="btn-saffron text-sm px-6 py-2.5">Join Us</a>
-    </div>
-    <button id="hamburger" class="md:hidden flex flex-col gap-1.5 p-2" onclick="toggleMenu()">
-      <span class="w-6 h-0.5 bg-white rounded block transition-all"></span>
-      <span class="w-6 h-0.5 bg-white rounded block transition-all"></span>
-      <span class="w-6 h-0.5 bg-white rounded block transition-all"></span>
-    </button>
-  </div>
-</nav>
-
-<!-- MOBILE MENU -->
-<div id="mobile-menu">
-  <button onclick="toggleMenu()" class="absolute top-6 right-6 text-white text-3xl">✕</button>
-  <a href="#about"     onclick="toggleMenu()">About</a>
-  <a href="#events"    onclick="toggleMenu()">Events</a>
-  <a href="#heritage"  onclick="toggleMenu()">Heritage</a>
-  <a href="#get-involved" onclick="toggleMenu()">Get Involved</a>
-  <a href="#contact"   onclick="toggleMenu()">Contact</a>
-  <a href="#get-involved" onclick="toggleMenu()" class="btn-saffron">Join Us</a>
-</div>
-
-<!-- HERO -->
-<section id="hero">
-  <div class="flag-stripe flag-saffron"></div>
-  <div class="flag-stripe flag-white"></div>
-  <div class="flag-stripe flag-green"></div>
-  <div class="hero-mandala"></div>
-
-  <!-- Floating particles -->
-  <div class="absolute inset-0 overflow-hidden pointer-events-none" id="particles"></div>
-
-  <div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
-    <div class="hero-logo mb-8">
-      <img src="assets/logo.jpeg" alt="AIC Fredericton Logo"
-           class="w-32 h-32 rounded-full object-cover mx-auto ring-4 shadow-2xl"
-           style="ring-color: rgba(255,153,51,0.5); box-shadow: 0 0 60px rgba(255,153,51,0.3), 0 0 120px rgba(19,136,8,0.15);" />
-    </div>
-    <div class="hero-badge">🍁 Fredericton, New Brunswick</div>
-    <h1 class="hero-title text-white font-black leading-none mb-6"
-        style="font-size: clamp(2.5rem, 7vw, 5.5rem);">
-      Association of<br>
-      <span style="color: var(--saffron);">Indo</span>-<span style="color: #7edd6e;">Canadians</span>
-    </h1>
-    <p class="hero-sub text-white/70 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-      Dedicated to fostering a vibrant, inclusive, and engaged community — bridging two rich cultures in the heart of New Brunswick.
-    </p>
-    <div class="hero-btns flex flex-wrap gap-4 justify-center">
-      <a href="#events" class="btn-saffron">Explore Events</a>
-      <a href="#about" class="btn-outline">Our Story</a>
-    </div>
-
-    <!-- Scroll cue -->
-    <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/40 text-xs">
-      <span>Scroll</span>
-      <div class="w-px h-8 bg-white/20 animate-pulse"></div>
-    </div>
-  </div>
-</section>
-
-<!-- STATS BAND -->
-<section style="background: linear-gradient(135deg, var(--saffron) 0%, #e07a00 100%);">
-  <div class="max-w-5xl mx-auto px-6 py-14 grid grid-cols-2 md:grid-cols-4 gap-8 text-center reveal">
-    <div>
-      <div class="text-white font-black text-4xl md:text-5xl" style="font-family:'Playfair Display',serif">500+</div>
-      <div class="text-white/80 text-sm mt-1 font-medium">Community Members</div>
-    </div>
-    <div>
-      <div class="text-white font-black text-4xl md:text-5xl" style="font-family:'Playfair Display',serif">20+</div>
-      <div class="text-white/80 text-sm mt-1 font-medium">Annual Events</div>
-    </div>
-    <div>
-      <div class="text-white font-black text-4xl md:text-5xl" style="font-family:'Playfair Display',serif">15+</div>
-      <div class="text-white/80 text-sm mt-1 font-medium">Years of Heritage</div>
-    </div>
-    <div>
-      <div class="text-white font-black text-4xl md:text-5xl" style="font-family:'Playfair Display',serif">10+</div>
-      <div class="text-white/80 text-sm mt-1 font-medium">Partner Organizations</div>
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about" class="py-24 px-6">
-  <div class="max-w-7xl mx-auto">
-    <div class="grid md:grid-cols-2 gap-16 items-center">
-      <div class="reveal">
-        <p class="section-label">Who We Are</p>
-        <h2 class="section-title">Building Bridges,<br>Celebrating Heritage</h2>
-        <div class="divider"></div>
-        <p class="text-gray-600 leading-relaxed mb-6">
-          AIC Fredericton is dedicated to fostering a vibrant, inclusive, and engaged community. Our mission is to serve the community by promoting cultural heritage, supporting community members, and creating opportunities for education, understanding, and connection.
-        </p>
-        <p class="text-gray-600 leading-relaxed mb-8">
-          Guided by values of <strong>integrity</strong>, <strong>inclusivity</strong>, and <strong>accountability</strong>, we strive to preserve cultural traditions while supporting the growth and well-being of present and future generations of Indo-Canadians in New Brunswick.
-        </p>
-        <a href="#get-involved" class="btn-saffron inline-block">Join Our Community</a>
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#hero" class="flex items-center gap-3">
+        <img src="assets/logo.jpeg" alt="AIC Logo" class="w-10 h-10 rounded-full object-cover ring-2 ring-white/30" />
+        <span class="logo-text text-white font-semibold text-sm leading-tight hidden sm:block">
+          Association of<br><span style="color:var(--saffron)">Indo-Canadians</span>
+        </span>
+      </a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#events" class="nav-link">Events</a>
+        <a href="#heritage" class="nav-link">Heritage</a>
+        <a href="#get-involved" class="nav-link">Get Involved</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <a href="#get-involved" class="btn-saffron text-sm px-6 py-2.5">Join Us</a>
       </div>
-      <div class="grid grid-cols-1 gap-4 reveal">
-        <div class="value-card">
-          <div class="value-icon" style="background:#FFF3E0;">🌏</div>
-          <h3 class="text-xl font-semibold mb-2">Cultural Heritage</h3>
-          <p class="text-gray-500 text-sm leading-relaxed">Preserving and celebrating the rich traditions of India while proudly embracing our Canadian identity.</p>
-        </div>
-        <div class="value-card">
-          <div class="value-icon" style="background:#E8F5E9;">🤝</div>
-          <h3 class="text-xl font-semibold mb-2">Community Support</h3>
-          <p class="text-gray-500 text-sm leading-relaxed">Helping newcomers settle, grow, and thrive through mentorship, resources, and a welcoming network.</p>
-        </div>
-        <div class="value-card">
-          <div class="value-icon" style="background:#E3F2FD;">📚</div>
-          <h3 class="text-xl font-semibold mb-2">Education & Understanding</h3>
-          <p class="text-gray-500 text-sm leading-relaxed">Promoting cross-cultural understanding and lifelong learning for all ages in our diverse community.</p>
-        </div>
+      <button id="hamburger" class="md:hidden flex flex-col gap-1.5 p-2" onclick="toggleMenu()">
+        <span class="w-6 h-0.5 bg-white rounded block transition-all"></span>
+        <span class="w-6 h-0.5 bg-white rounded block transition-all"></span>
+        <span class="w-6 h-0.5 bg-white rounded block transition-all"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div id="mobile-menu">
+    <button onclick="toggleMenu()" class="absolute top-6 right-6 text-white text-3xl">✕</button>
+    <a href="#about" onclick="toggleMenu()">About</a>
+    <a href="#events" onclick="toggleMenu()">Events</a>
+    <a href="#heritage" onclick="toggleMenu()">Heritage</a>
+    <a href="#get-involved" onclick="toggleMenu()">Get Involved</a>
+    <a href="#contact" onclick="toggleMenu()">Contact</a>
+    <a href="#get-involved" onclick="toggleMenu()" class="btn-saffron">Join Us</a>
+  </div>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="flag-stripe flag-saffron"></div>
+    <div class="flag-stripe flag-white"></div>
+    <div class="flag-stripe flag-green"></div>
+    <div class="hero-mandala"></div>
+
+    <!-- Floating particles -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none" id="particles"></div>
+
+    <div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
+      <div class="hero-logo mb-8">
+        <img src="assets/logo.jpeg" alt="AIC Fredericton Logo"
+          class="w-32 h-32 rounded-full object-cover mx-auto ring-4 shadow-2xl"
+          style="ring-color: rgba(255,153,51,0.5); box-shadow: 0 0 60px rgba(255,153,51,0.3), 0 0 120px rgba(19,136,8,0.15);" />
+      </div>
+      <div class="hero-badge">🍁 Fredericton, New Brunswick</div>
+      <h1 class="hero-title text-white font-black leading-none mb-6" style="font-size: clamp(2.5rem, 7vw, 5.5rem);">
+        Association of<br>
+        <span style="color: var(--saffron);">Indo</span>-<span style="color: #7edd6e;">Canadians</span>
+      </h1>
+      <p class="hero-sub text-white/70 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
+        Dedicated to fostering a vibrant, inclusive, and engaged community — bridging two rich cultures in the heart of
+        New Brunswick.
+      </p>
+      <div class="hero-btns flex flex-wrap gap-4 justify-center">
+        <a href="#events" class="btn-saffron">Explore Events</a>
+        <a href="#about" class="btn-outline">Our Story</a>
+      </div>
+
+      <!-- Scroll cue -->
+      <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/40 text-xs">
+        <span>Scroll</span>
+        <div class="w-px h-8 bg-white/20 animate-pulse"></div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- EVENTS -->
-<section id="events" class="py-24 px-6" style="background:#f9f6ef;">
-  <div class="max-w-7xl mx-auto">
-    <div class="text-center mb-12 reveal">
-      <p class="section-label">What's Happening</p>
-      <h2 class="section-title">Upcoming Events</h2>
+  <!-- STATS BAND -->
+  <section style="background: linear-gradient(135deg, var(--saffron) 0%, #e07a00 100%);">
+    <div class="max-w-5xl mx-auto px-6 py-14 grid grid-cols-2 md:grid-cols-4 gap-8 text-center reveal">
+      <div>
+        <div class="text-white font-black text-4xl md:text-5xl" style="font-family:'Playfair Display',serif">200+</div>
+        <div class="text-white/80 text-sm mt-1 font-medium">Community Members</div>
+      </div>
+      <div>
+        <div class="text-white font-black text-4xl md:text-5xl" style="font-family:'Playfair Display',serif">20+</div>
+        <div class="text-white/80 text-sm mt-1 font-medium">Annual Events</div>
+      </div>
+      <div>
+        <div class="text-white font-black text-4xl md:text-5xl" style="font-family:'Playfair Display',serif">65+</div>
+        <div class="text-white/80 text-sm mt-1 font-medium">Years of Heritage</div>
+      </div>
+      <div>
+        <div class="text-white font-black text-4xl md:text-5xl" style="font-family:'Playfair Display',serif">10+</div>
+        <div class="text-white/80 text-sm mt-1 font-medium">Partner Organizations</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-24 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        <div class="reveal">
+          <p class="section-label">Who We Are</p>
+          <h2 class="section-title">Building Bridges,<br>Celebrating Heritage</h2>
+          <div class="divider"></div>
+          <p class="text-gray-600 leading-relaxed mb-6">
+            AIC Fredericton is dedicated to fostering a vibrant, inclusive, and engaged community. Our mission is to
+            serve the community by promoting cultural heritage, supporting community members, and creating opportunities
+            for education, understanding, and connection.
+          </p>
+          <p class="text-gray-600 leading-relaxed mb-8">
+            Guided by values of <strong>integrity</strong>, <strong>inclusivity</strong>, and
+            <strong>accountability</strong>, we strive to preserve cultural traditions while supporting the growth and
+            well-being of present and future generations of Indo-Canadians in New Brunswick.
+          </p>
+          <a href="#get-involved" class="btn-saffron inline-block">Join Our Community</a>
+        </div>
+        <div class="grid grid-cols-1 gap-4 reveal">
+          <div class="value-card">
+            <div class="value-icon" style="background:#FFF3E0;">🌏</div>
+            <h3 class="text-xl font-semibold mb-2">Cultural Heritage</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">Preserving and celebrating the rich traditions of India
+              while proudly embracing our Canadian identity.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon" style="background:#E8F5E9;">🤝</div>
+            <h3 class="text-xl font-semibold mb-2">Community Support</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">Helping newcomers settle, grow, and thrive through
+              mentorship, resources, and a welcoming network.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon" style="background:#E3F2FD;">📚</div>
+            <h3 class="text-xl font-semibold mb-2">Education & Understanding</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">Promoting cross-cultural understanding and lifelong
+              learning for all ages in our diverse community.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENTS -->
+  <section id="events" class="py-24 px-6" style="background:#f9f6ef;">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-12 reveal">
+        <p class="section-label">What's Happening</p>
+        <h2 class="section-title">Upcoming Events</h2>
+        <div class="divider mx-auto"></div>
+        <p class="text-gray-500 max-w-xl mx-auto">From cultural celebrations to community workshops — there's always
+          something exciting happening at AIC Fredericton.</p>
+      </div>
+
+      <!-- Filter tabs -->
+      <div class="flex flex-wrap gap-2 justify-center mb-10 reveal">
+        <button class="tab-btn active" onclick="filterEvents('all', this)">All Events</button>
+        <button class="tab-btn" onclick="filterEvents('Cultural', this)">Cultural</button>
+        <button class="tab-btn" onclick="filterEvents('Community', this)">Community</button>
+        <button class="tab-btn" onclick="filterEvents('Arts', this)">Arts</button>
+        <button class="tab-btn" onclick="filterEvents('Education', this)">Education</button>
+      </div>
+
+      <div id="events-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Events injected by JS -->
+      </div>
+      <p class="text-center text-gray-400 mt-4 text-sm" id="no-events" style="display:none">No events in this category
+        yet.</p>
+    </div>
+  </section>
+
+  <!-- CULTURAL HERITAGE -->
+  <section id="heritage" class="py-24 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-14 reveal">
+        <p class="section-label">Our Roots</p>
+        <h2 class="section-title">Cultural Heritage</h2>
+        <div class="divider mx-auto"></div>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6 reveal">
+        <div class="heritage-item">
+          <span class="text-4xl">🎵</span>
+          <div>
+            <h3 class="font-semibold text-lg mb-1">Music & Dance</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">From classical Bharatanatyam and Kathak to folk dances like
+              Bhangra and Garba — we keep our performing arts alive through workshops and performances.</p>
+          </div>
+        </div>
+        <div class="heritage-item">
+          <span class="text-4xl">🍛</span>
+          <div>
+            <h3 class="font-semibold text-lg mb-1">Cuisine & Food Culture</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">Food is at the heart of Indian culture. Our potlucks,
+              cooking demos, and food festivals bring the flavours of India to Fredericton's table.</p>
+          </div>
+        </div>
+        <div class="heritage-item">
+          <span class="text-4xl">🪔</span>
+          <div>
+            <h3 class="font-semibold text-lg mb-1">Festivals & Celebrations</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">Diwali, Holi, Eid, Navratri, Onam, and more — we celebrate
+              India's incredible diversity of festivals with the whole Fredericton community.</p>
+          </div>
+        </div>
+        <div class="heritage-item">
+          <span class="text-4xl">🧵</span>
+          <div>
+            <h3 class="font-semibold text-lg mb-1">Language & Literature</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">Language connects us to our roots. We support Hindi, Tamil,
+              Punjabi, and other language initiatives to help future generations stay connected.</p>
+          </div>
+        </div>
+        <div class="heritage-item">
+          <span class="text-4xl">🎨</span>
+          <div>
+            <h3 class="font-semibold text-lg mb-1">Arts & Crafts</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">Rangoli, Mehndi, pottery, and traditional textile arts — we
+              celebrate India's rich artistic heritage through exhibitions and workshops.</p>
+          </div>
+        </div>
+        <div class="heritage-item">
+          <span class="text-4xl">📖</span>
+          <div>
+            <h3 class="font-semibold text-lg mb-1">Oral History & Stories</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">Stories passed down through generations are our living
+              archive. We document, share, and celebrate the journeys of Indo-Canadian families in New Brunswick.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GET INVOLVED -->
+  <section id="get-involved" class="py-24 px-6"
+    style="background: linear-gradient(135deg, #0a0010 0%, #1a0a00 50%, #001400 100%);">
+    <div class="max-w-3xl mx-auto text-center reveal">
+      <p class="section-label" style="color:var(--saffron-light)">Be Part of Something Meaningful</p>
+      <h2 class="section-title text-white mb-4">Get Involved</h2>
       <div class="divider mx-auto"></div>
-      <p class="text-gray-500 max-w-xl mx-auto">From cultural celebrations to community workshops — there's always something exciting happening at AIC Fredericton.</p>
+      <p class="text-white/60 mb-10 leading-relaxed">
+        Whether you're a newcomer, a long-time resident, or simply someone who loves culture — there's a place for you
+        in our community. Fill out the form below and we'll be in touch!
+      </p>
+      <div class="bg-white/5 backdrop-blur border border-white/10 rounded-3xl p-8 md:p-12 text-left">
+        <div class="grid md:grid-cols-2 gap-5">
+          <div>
+            <label class="block text-white/70 text-sm mb-2 font-medium">Full Name *</label>
+            <input type="text" class="form-input" placeholder="Your full name" id="f-name" />
+          </div>
+          <div>
+            <label class="block text-white/70 text-sm mb-2 font-medium">Email *</label>
+            <input type="email" class="form-input" placeholder="your@email.com" id="f-email" />
+          </div>
+          <div>
+            <label class="block text-white/70 text-sm mb-2 font-medium">Phone</label>
+            <input type="tel" class="form-input" placeholder="+1 (506) 000-0000" id="f-phone" />
+          </div>
+          <div>
+            <label class="block text-white/70 text-sm mb-2 font-medium">How Can You Help?</label>
+            <select class="form-input" id="f-role">
+              <option value="">Select an area...</option>
+              <option>Event Volunteer</option>
+              <option>Cultural Performer</option>
+              <option>Committee Member</option>
+              <option>Sponsor / Donor</option>
+              <option>New Member</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="md:col-span-2">
+            <label class="block text-white/70 text-sm mb-2 font-medium">Message</label>
+            <textarea class="form-input" rows="4" placeholder="Tell us about yourself or any questions..."
+              id="f-message"></textarea>
+          </div>
+        </div>
+        <div class="mt-6 flex flex-col sm:flex-row gap-4 items-center">
+          <button class="btn-saffron w-full sm:w-auto" onclick="submitForm()">Submit & Join Us 🍁</button>
+          <a href="https://forms.gle/cc819vSjjHwMnQS19" target="_blank"
+            class="text-white/50 text-sm hover:text-white transition-colors">Or use Google Form →</a>
+        </div>
+        <p id="form-msg" class="text-green-400 mt-4 text-sm hidden">✅ Thank you! We'll be in touch soon.</p>
+      </div>
     </div>
+  </section>
 
-    <!-- Filter tabs -->
-    <div class="flex flex-wrap gap-2 justify-center mb-10 reveal">
-      <button class="tab-btn active" onclick="filterEvents('all', this)">All Events</button>
-      <button class="tab-btn" onclick="filterEvents('Cultural', this)">Cultural</button>
-      <button class="tab-btn" onclick="filterEvents('Community', this)">Community</button>
-      <button class="tab-btn" onclick="filterEvents('Arts', this)">Arts</button>
-      <button class="tab-btn" onclick="filterEvents('Education', this)">Education</button>
-    </div>
-
-    <div id="events-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <!-- Events injected by JS -->
-    </div>
-    <p class="text-center text-gray-400 mt-4 text-sm" id="no-events" style="display:none">No events in this category yet.</p>
-  </div>
-</section>
-
-<!-- CULTURAL HERITAGE -->
-<section id="heritage" class="py-24 px-6">
-  <div class="max-w-7xl mx-auto">
-    <div class="text-center mb-14 reveal">
-      <p class="section-label">Our Roots</p>
-      <h2 class="section-title">Cultural Heritage</h2>
-      <div class="divider mx-auto"></div>
-    </div>
-    <div class="grid md:grid-cols-2 gap-6 reveal">
-      <div class="heritage-item">
-        <span class="text-4xl">🎵</span>
-        <div>
-          <h3 class="font-semibold text-lg mb-1">Music & Dance</h3>
-          <p class="text-gray-500 text-sm leading-relaxed">From classical Bharatanatyam and Kathak to folk dances like Bhangra and Garba — we keep our performing arts alive through workshops and performances.</p>
-        </div>
-      </div>
-      <div class="heritage-item">
-        <span class="text-4xl">🍛</span>
-        <div>
-          <h3 class="font-semibold text-lg mb-1">Cuisine & Food Culture</h3>
-          <p class="text-gray-500 text-sm leading-relaxed">Food is at the heart of Indian culture. Our potlucks, cooking demos, and food festivals bring the flavours of India to Fredericton's table.</p>
-        </div>
-      </div>
-      <div class="heritage-item">
-        <span class="text-4xl">🪔</span>
-        <div>
-          <h3 class="font-semibold text-lg mb-1">Festivals & Celebrations</h3>
-          <p class="text-gray-500 text-sm leading-relaxed">Diwali, Holi, Eid, Navratri, Onam, and more — we celebrate India's incredible diversity of festivals with the whole Fredericton community.</p>
-        </div>
-      </div>
-      <div class="heritage-item">
-        <span class="text-4xl">🧵</span>
-        <div>
-          <h3 class="font-semibold text-lg mb-1">Language & Literature</h3>
-          <p class="text-gray-500 text-sm leading-relaxed">Language connects us to our roots. We support Hindi, Tamil, Punjabi, and other language initiatives to help future generations stay connected.</p>
-        </div>
-      </div>
-      <div class="heritage-item">
-        <span class="text-4xl">🎨</span>
-        <div>
-          <h3 class="font-semibold text-lg mb-1">Arts & Crafts</h3>
-          <p class="text-gray-500 text-sm leading-relaxed">Rangoli, Mehndi, pottery, and traditional textile arts — we celebrate India's rich artistic heritage through exhibitions and workshops.</p>
-        </div>
-      </div>
-      <div class="heritage-item">
-        <span class="text-4xl">📖</span>
-        <div>
-          <h3 class="font-semibold text-lg mb-1">Oral History & Stories</h3>
-          <p class="text-gray-500 text-sm leading-relaxed">Stories passed down through generations are our living archive. We document, share, and celebrate the journeys of Indo-Canadian families in New Brunswick.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- GET INVOLVED -->
-<section id="get-involved" class="py-24 px-6" style="background: linear-gradient(135deg, #0a0010 0%, #1a0a00 50%, #001400 100%);">
-  <div class="max-w-3xl mx-auto text-center reveal">
-    <p class="section-label" style="color:var(--saffron-light)">Be Part of Something Meaningful</p>
-    <h2 class="section-title text-white mb-4">Get Involved</h2>
-    <div class="divider mx-auto"></div>
-    <p class="text-white/60 mb-10 leading-relaxed">
-      Whether you're a newcomer, a long-time resident, or simply someone who loves culture — there's a place for you in our community. Fill out the form below and we'll be in touch!
-    </p>
-    <div class="bg-white/5 backdrop-blur border border-white/10 rounded-3xl p-8 md:p-12 text-left">
-      <div class="grid md:grid-cols-2 gap-5">
-        <div>
-          <label class="block text-white/70 text-sm mb-2 font-medium">Full Name *</label>
-          <input type="text" class="form-input" placeholder="Your full name" id="f-name" />
-        </div>
-        <div>
-          <label class="block text-white/70 text-sm mb-2 font-medium">Email *</label>
-          <input type="email" class="form-input" placeholder="your@email.com" id="f-email" />
-        </div>
-        <div>
-          <label class="block text-white/70 text-sm mb-2 font-medium">Phone</label>
-          <input type="tel" class="form-input" placeholder="+1 (506) 000-0000" id="f-phone" />
-        </div>
-        <div>
-          <label class="block text-white/70 text-sm mb-2 font-medium">How Can You Help?</label>
-          <select class="form-input" id="f-role">
-            <option value="">Select an area...</option>
-            <option>Event Volunteer</option>
-            <option>Cultural Performer</option>
-            <option>Committee Member</option>
-            <option>Sponsor / Donor</option>
-            <option>New Member</option>
-            <option>Other</option>
-          </select>
-        </div>
-        <div class="md:col-span-2">
-          <label class="block text-white/70 text-sm mb-2 font-medium">Message</label>
-          <textarea class="form-input" rows="4" placeholder="Tell us about yourself or any questions..." id="f-message"></textarea>
-        </div>
-      </div>
-      <div class="mt-6 flex flex-col sm:flex-row gap-4 items-center">
-        <button class="btn-saffron w-full sm:w-auto" onclick="submitForm()">Submit & Join Us 🍁</button>
-        <a href="https://forms.google.com" target="_blank" class="text-white/50 text-sm hover:text-white transition-colors">Or use Google Form →</a>
-      </div>
-      <p id="form-msg" class="text-green-400 mt-4 text-sm hidden">✅ Thank you! We'll be in touch soon.</p>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="py-24 px-6">
-  <div class="max-w-7xl mx-auto">
-    <div class="grid md:grid-cols-2 gap-16 items-center">
-      <div class="reveal">
-        <p class="section-label">Reach Out</p>
-        <h2 class="section-title">Contact Us</h2>
-        <div class="divider"></div>
-        <div class="space-y-6">
-          <div class="flex items-start gap-4">
-            <div class="w-12 h-12 rounded-xl flex items-center justify-center text-xl flex-shrink-0" style="background:#FFF3E0;">📍</div>
-            <div>
-              <div class="font-semibold mb-1">Location</div>
-              <div class="text-gray-500 text-sm">Fredericton, New Brunswick, Canada</div>
+  <!-- CONTACT -->
+  <section id="contact" class="py-24 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        <div class="reveal">
+          <p class="section-label">Reach Out</p>
+          <h2 class="section-title">Contact Us</h2>
+          <div class="divider"></div>
+          <div class="space-y-6">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-xl flex items-center justify-center text-xl flex-shrink-0"
+                style="background:#FFF3E0;">📍</div>
+              <div>
+                <div class="font-semibold mb-1">Location</div>
+                <div class="text-gray-500 text-sm">Fredericton, New Brunswick, Canada</div>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-xl flex items-center justify-center text-xl flex-shrink-0"
+                style="background:#E8F5E9;">🌐</div>
+              <div>
+                <div class="font-semibold mb-1">Website</div>
+                <a href="https://aicfred.org" class="text-sm" style="color:var(--india-green)">aicfred.org</a>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-xl flex items-center justify-center text-xl flex-shrink-0"
+                style="background:#E3F2FD;">📧</div>
+              <div>
+                <div class="font-semibold mb-1">Email</div>
+                <a href="mailto:indo.canadians@gmail.com"
+                  class="text-gray-500 text-sm hover:text-saffron">indo.canadians@gmail.com</a>
+              </div>
             </div>
           </div>
-          <div class="flex items-start gap-4">
-            <div class="w-12 h-12 rounded-xl flex items-center justify-center text-xl flex-shrink-0" style="background:#E8F5E9;">🌐</div>
-            <div>
-              <div class="font-semibold mb-1">Website</div>
-              <a href="https://aicfred.org" class="text-sm" style="color:var(--india-green)">aicfred.org</a>
-            </div>
+          <div class="flex gap-4 mt-8">
+            <a href="https://www.facebook.com/manisha.c.d" target="_blank"
+              class="w-11 h-11 rounded-full border border-gray-200 flex items-center justify-center text-lg hover:border-saffron transition-colors"
+              title="Facebook"><img src="assets/f-logo.png" alt="Facebook Logo" /></a>
+            <a href="https://www.instagram.com/aic_nb/" target="_blank"
+              class="w-11 h-11 rounded-full border border-gray-200 flex items-center justify-center text-lg hover:border-saffron transition-colors"
+              title="Instagram"><img src="assets/i-logo.png" alt="Instagram Logo" /></a>
           </div>
-          <div class="flex items-start gap-4">
-            <div class="w-12 h-12 rounded-xl flex items-center justify-center text-xl flex-shrink-0" style="background:#E3F2FD;">📧</div>
-            <div>
-              <div class="font-semibold mb-1">Email</div>
-              <a href="mailto:info@aicfred.org" class="text-gray-500 text-sm hover:text-saffron">info@aicfred.org</a>
+        </div>
+        <div class="reveal">
+          <div
+            style="background: linear-gradient(135deg, var(--saffron) 0%, var(--india-green) 100%); border-radius: 24px; padding: 3px;">
+            <div class="bg-white rounded-3xl p-8 text-center">
+              <img src="assets/logo.jpeg" alt="AIC Logo"
+                class="w-28 h-28 rounded-full object-cover mx-auto mb-6 shadow-lg" />
+              <h3 class="text-2xl font-bold mb-2" style="font-family:'Playfair Display',serif;">AIC Fredericton</h3>
+              <p class="text-gray-500 text-sm mb-6">Association of Indo-Canadians<br>New Brunswick Chapter</p>
+              <div class="text-3xl mb-4">🇮🇳 🤝 🇨🇦</div>
+              <p class="text-xs text-gray-400 italic">"Two flags, one community, infinite possibilities."</p>
             </div>
           </div>
         </div>
-        <div class="flex gap-4 mt-8">
-          <a href="https://facebook.com" target="_blank" class="w-11 h-11 rounded-full border border-gray-200 flex items-center justify-center text-lg hover:border-saffron transition-colors" title="Facebook">📘</a>
-          <a href="https://instagram.com" target="_blank" class="w-11 h-11 rounded-full border border-gray-200 flex items-center justify-center text-lg hover:border-saffron transition-colors" title="Instagram">📸</a>
-          <a href="https://twitter.com" target="_blank" class="w-11 h-11 rounded-full border border-gray-200 flex items-center justify-center text-lg hover:border-saffron transition-colors" title="Twitter">🐦</a>
-          <a href="https://youtube.com" target="_blank" class="w-11 h-11 rounded-full border border-gray-200 flex items-center justify-center text-lg hover:border-saffron transition-colors" title="YouTube">▶️</a>
-        </div>
       </div>
-      <div class="reveal">
-        <div style="background: linear-gradient(135deg, var(--saffron) 0%, var(--india-green) 100%); border-radius: 24px; padding: 3px;">
-          <div class="bg-white rounded-3xl p-8 text-center">
-            <img src="assets/logo.jpeg" alt="AIC Logo" class="w-28 h-28 rounded-full object-cover mx-auto mb-6 shadow-lg" />
-            <h3 class="text-2xl font-bold mb-2" style="font-family:'Playfair Display',serif;">AIC Fredericton</h3>
-            <p class="text-gray-500 text-sm mb-6">Association of Indo-Canadians<br>New Brunswick Chapter</p>
-            <div class="text-3xl mb-4">🇮🇳 🤝 🇨🇦</div>
-            <p class="text-xs text-gray-400 italic">"Two flags, one community, infinite possibilities."</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-12 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid md:grid-cols-3 gap-8 border-b border-white/10 pb-10 mb-8">
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <img src="assets/logo.jpeg" alt="AIC" class="w-10 h-10 rounded-full object-cover" />
+            <span class="text-white font-semibold">AIC Fredericton</span>
+          </div>
+          <p class="text-white/40 text-sm leading-relaxed">Fostering a vibrant, inclusive, and engaged Indo-Canadian
+            community in Fredericton, NB.</p>
+        </div>
+        <div>
+          <p class="text-white/60 font-semibold text-sm uppercase tracking-wider mb-4">Quick Links</p>
+          <div class="flex flex-col gap-2">
+            <a href="#about" class="text-white/40 text-sm hover:text-white transition-colors">About Us</a>
+            <a href="#events" class="text-white/40 text-sm hover:text-white transition-colors">Events</a>
+            <a href="#heritage" class="text-white/40 text-sm hover:text-white transition-colors">Cultural Heritage</a>
+            <a href="#get-involved" class="text-white/40 text-sm hover:text-white transition-colors">Get Involved</a>
+            <a href="#contact" class="text-white/40 text-sm hover:text-white transition-colors">Contact</a>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="py-12 px-6">
-  <div class="max-w-7xl mx-auto">
-    <div class="grid md:grid-cols-3 gap-8 border-b border-white/10 pb-10 mb-8">
-      <div>
-        <div class="flex items-center gap-3 mb-4">
-          <img src="assets/logo.jpeg" alt="AIC" class="w-10 h-10 rounded-full object-cover" />
-          <span class="text-white font-semibold">AIC Fredericton</span>
-        </div>
-        <p class="text-white/40 text-sm leading-relaxed">Fostering a vibrant, inclusive, and engaged Indo-Canadian community in Fredericton, NB.</p>
-      </div>
-      <div>
-        <p class="text-white/60 font-semibold text-sm uppercase tracking-wider mb-4">Quick Links</p>
-        <div class="flex flex-col gap-2">
-          <a href="#about"    class="text-white/40 text-sm hover:text-white transition-colors">About Us</a>
-          <a href="#events"   class="text-white/40 text-sm hover:text-white transition-colors">Events</a>
-          <a href="#heritage" class="text-white/40 text-sm hover:text-white transition-colors">Cultural Heritage</a>
-          <a href="#get-involved" class="text-white/40 text-sm hover:text-white transition-colors">Get Involved</a>
-          <a href="#contact"  class="text-white/40 text-sm hover:text-white transition-colors">Contact</a>
+        <div>
+          <p class="text-white/60 font-semibold text-sm uppercase tracking-wider mb-4">Stay Connected</p>
+          <p class="text-white/40 text-sm mb-4">Sign up for our newsletter to hear about upcoming events and community
+            news.</p>
+          <div class="flex gap-2">
+            <input type="email" placeholder="your@email.com" class="form-input text-sm py-2.5 flex-1" id="nl-email" />
+            <button class="btn-saffron px-4 py-2.5 text-sm" onclick="subscribeNewsletter()">→</button>
+          </div>
+          <p id="nl-msg" class="text-green-400 text-xs mt-2 hidden">Subscribed! 🎉</p>
         </div>
       </div>
-      <div>
-        <p class="text-white/60 font-semibold text-sm uppercase tracking-wider mb-4">Stay Connected</p>
-        <p class="text-white/40 text-sm mb-4">Sign up for our newsletter to hear about upcoming events and community news.</p>
-        <div class="flex gap-2">
-          <input type="email" placeholder="your@email.com" class="form-input text-sm py-2.5 flex-1" id="nl-email" />
-          <button class="btn-saffron px-4 py-2.5 text-sm" onclick="subscribeNewsletter()">→</button>
-        </div>
-        <p id="nl-msg" class="text-green-400 text-xs mt-2 hidden">Subscribed! 🎉</p>
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-white/30 text-xs">
+        <p>© 2026 Association of Indo-Canadians – Fredericton. All rights reserved.</p>
+        <p>Built with ❤️ for our community | <a href="https://aicfred.org" class="hover:text-white">aicfred.org</a></p>
       </div>
     </div>
-    <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-white/30 text-xs">
-      <p>© 2026 Association of Indo-Canadians – Fredericton. All rights reserved.</p>
-      <p>Built with ❤️ for our community | <a href="https://aicfred.org" class="hover:text-white">aicfred.org</a></p>
-    </div>
-  </div>
-</footer>
+  </footer>
 
-<script>
-// ──────────────────────────────────────────────────────────────────────────────
-// NAVBAR SCROLL
-// ──────────────────────────────────────────────────────────────────────────────
-window.addEventListener('scroll', () => {
-  const nav = document.getElementById('navbar');
-  nav.classList.toggle('scrolled', window.scrollY > 80);
-});
+  <script>
+    // ──────────────────────────────────────────────────────────────────────────────
+    // NAVBAR SCROLL
+    // ──────────────────────────────────────────────────────────────────────────────
+    window.addEventListener('scroll', () => {
+      const nav = document.getElementById('navbar');
+      nav.classList.toggle('scrolled', window.scrollY > 80);
+    });
 
-// ──────────────────────────────────────────────────────────────────────────────
-// MOBILE MENU
-// ──────────────────────────────────────────────────────────────────────────────
-function toggleMenu() {
-  document.getElementById('mobile-menu').classList.toggle('open');
-}
+    // ──────────────────────────────────────────────────────────────────────────────
+    // MOBILE MENU
+    // ──────────────────────────────────────────────────────────────────────────────
+    function toggleMenu() {
+      document.getElementById('mobile-menu').classList.toggle('open');
+    }
 
-// ──────────────────────────────────────────────────────────────────────────────
-// SCROLL REVEAL
-// ──────────────────────────────────────────────────────────────────────────────
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-}, { threshold: 0.12 });
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    // ──────────────────────────────────────────────────────────────────────────────
+    // SCROLL REVEAL
+    // ──────────────────────────────────────────────────────────────────────────────
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-// ──────────────────────────────────────────────────────────────────────────────
-// EVENTS – load from JSON
-// ──────────────────────────────────────────────────────────────────────────────
-let allEvents = [];
+    // ──────────────────────────────────────────────────────────────────────────────
+    // EVENTS – load from JSON
+    // ──────────────────────────────────────────────────────────────────────────────
+    let allEvents = [];
 
-async function loadEvents() {
-  try {
-    const res = await fetch('data/events.json');
-    allEvents = await res.json();
-    renderEvents(allEvents);
-  } catch(e) {
-    console.warn('Could not load events.json:', e);
-  }
-}
+    async function loadEvents() {
+      try {
+        const res = await fetch('data/events.json');
+        allEvents = await res.json();
+        renderEvents(allEvents);
+      } catch (e) {
+        console.warn('Could not load events.json:', e);
+      }
+    }
 
-function formatDate(dateStr) {
-  const d = new Date(dateStr + 'T12:00:00');
-  return d.toLocaleDateString('en-CA', { weekday:'short', year:'numeric', month:'long', day:'numeric' });
-}
+    function formatDate(dateStr) {
+      const d = new Date(dateStr + 'T12:00:00');
+      return d.toLocaleDateString('en-CA', { weekday: 'short', year: 'numeric', month: 'long', day: 'numeric' });
+    }
 
-function renderEvents(events) {
-  const grid = document.getElementById('events-grid');
-  const noMsg = document.getElementById('no-events');
-  grid.innerHTML = '';
-  if (!events.length) { noMsg.style.display = 'block'; return; }
-  noMsg.style.display = 'none';
-  events.forEach((ev, i) => {
-    const card = document.createElement('div');
-    card.className = 'event-card reveal';
-    card.style.animationDelay = i * 0.08 + 's';
-    card.innerHTML = `
+    function renderEvents(events) {
+      const grid = document.getElementById('events-grid');
+      const noMsg = document.getElementById('no-events');
+      grid.innerHTML = '';
+      if (!events.length) { noMsg.style.display = 'block'; return; }
+      noMsg.style.display = 'none';
+      events.forEach((ev, i) => {
+        const card = document.createElement('div');
+        card.className = 'event-card reveal';
+        card.style.animationDelay = i * 0.08 + 's';
+        card.innerHTML = `
       <div class="event-header">
         <div class="event-emoji">${ev.image}</div>
         <span class="event-category cat-${ev.category}">${ev.category}</span>
@@ -663,53 +935,53 @@ function renderEvents(events) {
         </div>
         <a href="${ev.register}" target="_blank" class="btn-saffron text-sm inline-block mt-2 px-6 py-2.5">Register →</a>
       </div>`;
-    grid.appendChild(card);
-    observer.observe(card);
-  });
-}
+        grid.appendChild(card);
+        observer.observe(card);
+      });
+    }
 
-function filterEvents(category, btn) {
-  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  const filtered = category === 'all' ? allEvents : allEvents.filter(e => e.category === category);
-  renderEvents(filtered);
-}
+    function filterEvents(category, btn) {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filtered = category === 'all' ? allEvents : allEvents.filter(e => e.category === category);
+      renderEvents(filtered);
+    }
 
-// ──────────────────────────────────────────────────────────────────────────────
-// FORM
-// ──────────────────────────────────────────────────────────────────────────────
-function submitForm() {
-  const name  = document.getElementById('f-name').value.trim();
-  const email = document.getElementById('f-email').value.trim();
-  if (!name || !email) { alert('Please fill in your name and email.'); return; }
-  // In production: POST to Google Form or backend
-  document.getElementById('form-msg').classList.remove('hidden');
-  ['f-name','f-email','f-phone','f-role','f-message'].forEach(id => {
-    const el = document.getElementById(id);
-    if (el) el.value = '';
-  });
-  // Redirect to Google Form after 1s
-  setTimeout(() => { window.open('https://forms.google.com', '_blank'); }, 1000);
-}
+    // ──────────────────────────────────────────────────────────────────────────────
+    // FORM
+    // ──────────────────────────────────────────────────────────────────────────────
+    function submitForm() {
+      const name = document.getElementById('f-name').value.trim();
+      const email = document.getElementById('f-email').value.trim();
+      if (!name || !email) { alert('Please fill in your name and email.'); return; }
+      // In production: POST to Google Form or backend
+      document.getElementById('form-msg').classList.remove('hidden');
+      ['f-name', 'f-email', 'f-phone', 'f-role', 'f-message'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.value = '';
+      });
+      // Redirect to Google Form after 1s
+      setTimeout(() => { window.open('https://forms.google.com', '_blank'); }, 1000);
+    }
 
-function subscribeNewsletter() {
-  const email = document.getElementById('nl-email').value.trim();
-  if (!email) return;
-  document.getElementById('nl-msg').classList.remove('hidden');
-  document.getElementById('nl-email').value = '';
-}
+    function subscribeNewsletter() {
+      const email = document.getElementById('nl-email').value.trim();
+      if (!email) return;
+      document.getElementById('nl-msg').classList.remove('hidden');
+      document.getElementById('nl-email').value = '';
+    }
 
-// ──────────────────────────────────────────────────────────────────────────────
-// PARTICLES
-// ──────────────────────────────────────────────────────────────────────────────
-function createParticles() {
-  const container = document.getElementById('particles');
-  const symbols = ['🍁', '✦', '◆', '●'];
-  for (let i = 0; i < 20; i++) {
-    const el = document.createElement('div');
-    const sym = symbols[Math.floor(Math.random() * symbols.length)];
-    el.textContent = sym;
-    el.style.cssText = `
+    // ──────────────────────────────────────────────────────────────────────────────
+    // PARTICLES
+    // ──────────────────────────────────────────────────────────────────────────────
+    function createParticles() {
+      const container = document.getElementById('particles');
+      const symbols = ['🍁', '✦', '◆', '●'];
+      for (let i = 0; i < 20; i++) {
+        const el = document.createElement('div');
+        const sym = symbols[Math.floor(Math.random() * symbols.length)];
+        el.textContent = sym;
+        el.style.cssText = `
       position: absolute;
       left: ${Math.random() * 100}%;
       top: ${Math.random() * 100}%;
@@ -720,24 +992,25 @@ function createParticles() {
       animation-delay: ${Math.random() * 5}s;
       pointer-events: none;
     `;
-    container.appendChild(el);
-  }
-  const style = document.createElement('style');
-  style.textContent = `
+        container.appendChild(el);
+      }
+      const style = document.createElement('style');
+      style.textContent = `
     @keyframes floatP {
       from { transform: translateY(0) rotate(0deg); }
       to   { transform: translateY(-30px) rotate(20deg); }
     }`;
-  document.head.appendChild(style);
-}
+      document.head.appendChild(style);
+    }
 
-// ──────────────────────────────────────────────────────────────────────────────
-// INIT
-// ──────────────────────────────────────────────────────────────────────────────
-document.addEventListener('DOMContentLoaded', () => {
-  loadEvents();
-  createParticles();
-});
-</script>
+    // ──────────────────────────────────────────────────────────────────────────────
+    // INIT
+    // ──────────────────────────────────────────────────────────────────────────────
+    document.addEventListener('DOMContentLoaded', () => {
+      loadEvents();
+      createParticles();
+    });
+  </script>
 </body>
+
 </html>
