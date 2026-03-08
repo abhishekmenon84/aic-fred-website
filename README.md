@@ -38,22 +38,10 @@ aic-fred-website/
 4. Click **Create Repository**
 
 ### Step 2: Upload Files
-
-**Option A – GitHub Web UI (easiest):**
 1. Open your new repo on GitHub
 2. Click **Add file → Upload files**
 3. Drag and drop all files (maintaining the folder structure)
 4. Commit changes
-
-**Option B – Git CLI:**
-```bash
-git init
-git add .
-git commit -m "Initial AIC Fredericton website"
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/aic-fred-website.git
-git push -u origin main
-```
 
 ### Step 3: Enable GitHub Pages
 
@@ -141,7 +129,7 @@ After editing, commit and push to GitHub — the site updates automatically.
 
 ## 📬 Contact
 
-- Email: info@aicfred.org  
+- Email: indo.canadians@gmail.com  
 - Website: [aicfred.org](https://aicfred.org)
 
 ---
