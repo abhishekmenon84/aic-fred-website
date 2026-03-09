@@ -411,7 +411,7 @@
     .past-event-overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(to top, rgba(0,0,0,0.8), transparent 50%);
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent 50%);
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
@@ -697,9 +697,9 @@
         <button class="tab-btn" onclick="filterEvents('Education', this)">Education</button>
       </div>
 
-      </div>
-      <p class="text-center text-gray-400 mt-4 text-sm" id="no-events" style="display:none">No events in this category
-        yet.</p>
+    </div>
+    <p class="text-center text-gray-400 mt-4 text-sm" id="no-events" style="display:none">No events in this category
+      yet.</p>
     </div>
   </section>
 
@@ -713,21 +713,24 @@
       </div>
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 reveal">
         <div class="past-event-card">
-          <img src="assets/events/placeholder-event1.jpg" alt="Diwali" class="past-event-img" onerror="this.src='https://via.placeholder.com/600x400?text=Event+Picture'"/>
+          <img src="assets/events/placeholder-event1.jpg" alt="Diwali" class="past-event-img"
+            onerror="this.src='https://via.placeholder.com/600x400?text=Event+Picture'" />
           <div class="past-event-overlay">
             <h3 class="font-bold text-xl">Diwali Celebration</h3>
             <p class="text-white/80 text-sm">October</p>
           </div>
         </div>
         <div class="past-event-card">
-          <img src="assets/events/placeholder-event2.jpg" alt="Summer Picnic" class="past-event-img" onerror="this.src='https://via.placeholder.com/600x400?text=Event+Picture'"/>
+          <img src="assets/events/placeholder-event2.jpg" alt="Summer Picnic" class="past-event-img"
+            onerror="this.src='https://via.placeholder.com/600x400?text=Event+Picture'" />
           <div class="past-event-overlay">
             <h3 class="font-bold text-xl">Summer Picnic</h3>
             <p class="text-white/80 text-sm">July</p>
           </div>
         </div>
         <div class="past-event-card">
-          <img src="assets/events/placeholder-event3.jpg" alt="Holi Fest" class="past-event-img" onerror="this.src='https://via.placeholder.com/600x400?text=Event+Picture'"/>
+          <img src="assets/events/placeholder-event3.jpg" alt="Holi Fest" class="past-event-img"
+            onerror="this.src='https://via.placeholder.com/600x400?text=Event+Picture'" />
           <div class="past-event-overlay">
             <h3 class="font-bold text-xl">Holi Festival of Colours</h3>
             <p class="text-white/80 text-sm">March</p>
@@ -1062,12 +1065,13 @@
         grid.innerHTML = '';
         executives.forEach((ex, i) => {
           const delay = i * 0.1 + 's';
+          const linkedinHtml = ex.linkedin ? `<a href="${ex.linkedin}" target="_blank" class="inline-flex items-center gap-1.5 text-sm text-gray-500 hover:text-saffron transition-colors mt-2"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg> LinkedIn</a>` : '';
           const html = `
             <div class="executive-card reveal" style="animation-delay: ${delay}">
               <img src="${ex.image}" alt="${ex.name}" class="executive-img" onerror="this.src='https://via.placeholder.com/150?text=Profile'" />
               <h3 class="text-xl font-bold mb-1">${ex.name}</h3>
               <p class="text-saffron font-semibold text-sm mb-3">${ex.role}</p>
-              <p class="text-gray-500 text-sm leading-relaxed">${ex.description}</p>
+              ${linkedinHtml}
             </div>
           `;
           grid.insertAdjacentHTML('beforeend', html);
