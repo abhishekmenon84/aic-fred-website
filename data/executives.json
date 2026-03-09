@@ -1,0 +1,51 @@
+[
+  {
+    "id": "1",
+    "name": "Abhishek Men",
+    "role": "President",
+    "image": "assets/executives/Abhishek-Menon.jpg",
+    "description": "President"
+  },
+  {
+    "id": "2",
+    "name": "Harmeet Kaur",
+    "role": "Social Secretary",
+    "image": "assets/executives/Harmeet-Kaur.jpg",
+    "description": "Social Secretary"
+  },
+  {
+    "id": "3",
+    "name": "Uthira Kumar Ponnusamy",
+    "role": "Secretary",
+    "image": "assets/executives/Uthira-Kumar-Ponnusamy.jpg",
+    "description": "Secretary"
+  },
+  {
+    "id": "4",
+    "name": "Manisha Verma",
+    "role": "Board of Director",
+    "image": "assets/executives/Manisha-Verma.jpg",
+    "description": "Board of Director"
+  },
+  {
+    "id": "5",
+    "name": "Rakesh Mishra",
+    "role": "Board of Director",
+    "image": "assets/executives/Rakesh-Mishra.jpg",
+    "description": "Board of Director"
+  },
+  {
+    "id": "6",
+    "name": "Mathuresh Singh",
+    "role": "Board of Director",
+    "image": "assets/executives/Mathuresh-Singh.jpg",
+    "description": "Board of Director"
+  },
+  {
+    "id": "7",
+    "name": "Dr. Ram Prakash Galwa",
+    "role": "Past President",
+    "image": "assets/executives/Dr-Ram-Prakash-Galwa.jpg",
+    "description": "Past President"
+  }
+]

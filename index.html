@@ -365,6 +365,60 @@
       color: #1565C0;
     }
 
+    /* EXECUTIVES & PAST EVENTS */
+    .executive-card {
+      background: white;
+      border-radius: 20px;
+      padding: 32px;
+      text-align: center;
+      border: 1px solid #f0ece0;
+      box-shadow: 0 2px 16px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s;
+    }
+
+    .executive-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.10);
+    }
+
+    .executive-img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 20px;
+      border: 3px solid var(--saffron-light);
+    }
+
+    .past-event-card {
+      border-radius: 16px;
+      overflow: hidden;
+      position: relative;
+      aspect-ratio: 4/3;
+    }
+
+    .past-event-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s;
+    }
+
+    .past-event-card:hover .past-event-img {
+      transform: scale(1.05);
+    }
+
+    .past-event-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.8), transparent 50%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 24px;
+      color: white;
+    }
+
     /* HERITAGE */
     .heritage-item {
       display: flex;
@@ -490,7 +544,9 @@
       </a>
       <div class="hidden md:flex items-center gap-8">
         <a href="#about" class="nav-link">About</a>
+        <a href="#executives" class="nav-link">Executives</a>
         <a href="#events" class="nav-link">Events</a>
+        <a href="#past-events" class="nav-link">Past Events</a>
         <a href="#heritage" class="nav-link">Heritage</a>
         <a href="#get-involved" class="nav-link">Get Involved</a>
         <a href="#contact" class="nav-link">Contact</a>
@@ -508,7 +564,9 @@
   <div id="mobile-menu">
     <button onclick="toggleMenu()" class="absolute top-6 right-6 text-white text-3xl">✕</button>
     <a href="#about" onclick="toggleMenu()">About</a>
+    <a href="#executives" onclick="toggleMenu()">Executives</a>
     <a href="#events" onclick="toggleMenu()">Events</a>
+    <a href="#past-events" onclick="toggleMenu()">Past Events</a>
     <a href="#heritage" onclick="toggleMenu()">Heritage</a>
     <a href="#get-involved" onclick="toggleMenu()">Get Involved</a>
     <a href="#contact" onclick="toggleMenu()">Contact</a>
@@ -639,11 +697,57 @@
         <button class="tab-btn" onclick="filterEvents('Education', this)">Education</button>
       </div>
 
-      <div id="events-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Events injected by JS -->
       </div>
       <p class="text-center text-gray-400 mt-4 text-sm" id="no-events" style="display:none">No events in this category
         yet.</p>
+    </div>
+  </section>
+
+  <!-- PAST EVENTS -->
+  <section id="past-events" class="py-24 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-14 reveal">
+        <p class="section-label">Memories</p>
+        <h2 class="section-title">Past Events Gallery</h2>
+        <div class="divider mx-auto"></div>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 reveal">
+        <div class="past-event-card">
+          <img src="assets/events/placeholder-event1.jpg" alt="Diwali" class="past-event-img" onerror="this.src='https://via.placeholder.com/600x400?text=Event+Picture'"/>
+          <div class="past-event-overlay">
+            <h3 class="font-bold text-xl">Diwali Celebration</h3>
+            <p class="text-white/80 text-sm">October</p>
+          </div>
+        </div>
+        <div class="past-event-card">
+          <img src="assets/events/placeholder-event2.jpg" alt="Summer Picnic" class="past-event-img" onerror="this.src='https://via.placeholder.com/600x400?text=Event+Picture'"/>
+          <div class="past-event-overlay">
+            <h3 class="font-bold text-xl">Summer Picnic</h3>
+            <p class="text-white/80 text-sm">July</p>
+          </div>
+        </div>
+        <div class="past-event-card">
+          <img src="assets/events/placeholder-event3.jpg" alt="Holi Fest" class="past-event-img" onerror="this.src='https://via.placeholder.com/600x400?text=Event+Picture'"/>
+          <div class="past-event-overlay">
+            <h3 class="font-bold text-xl">Holi Festival of Colours</h3>
+            <p class="text-white/80 text-sm">March</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXECUTIVES -->
+  <section id="executives" class="py-24 px-6" style="background:#fffdf5;">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-14 reveal">
+        <p class="section-label">Our Leadership</p>
+        <h2 class="section-title">Board of Executives</h2>
+        <div class="divider mx-auto"></div>
+      </div>
+      <div id="executives-grid" class="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <!-- Executives injected by JS -->
+      </div>
     </div>
   </section>
 
@@ -948,6 +1052,33 @@
     }
 
     // ──────────────────────────────────────────────────────────────────────────────
+    // EXECUTIVES – load from JSON
+    // ──────────────────────────────────────────────────────────────────────────────
+    async function loadExecutives() {
+      try {
+        const res = await fetch('data/executives.json');
+        const executives = await res.json();
+        const grid = document.getElementById('executives-grid');
+        grid.innerHTML = '';
+        executives.forEach((ex, i) => {
+          const delay = i * 0.1 + 's';
+          const html = `
+            <div class="executive-card reveal" style="animation-delay: ${delay}">
+              <img src="${ex.image}" alt="${ex.name}" class="executive-img" onerror="this.src='https://via.placeholder.com/150?text=Profile'" />
+              <h3 class="text-xl font-bold mb-1">${ex.name}</h3>
+              <p class="text-saffron font-semibold text-sm mb-3">${ex.role}</p>
+              <p class="text-gray-500 text-sm leading-relaxed">${ex.description}</p>
+            </div>
+          `;
+          grid.insertAdjacentHTML('beforeend', html);
+        });
+        document.querySelectorAll('#executives-grid .reveal').forEach(el => observer.observe(el));
+      } catch (e) {
+        console.warn('Could not load executives.json:', e);
+      }
+    }
+
+    // ──────────────────────────────────────────────────────────────────────────────
     // FORM
     // ──────────────────────────────────────────────────────────────────────────────
     function submitForm() {
@@ -1008,6 +1139,7 @@
     // ──────────────────────────────────────────────────────────────────────────────
     document.addEventListener('DOMContentLoaded', () => {
       loadEvents();
+      loadExecutives();
       createParticles();
     });
   </script>
