@@ -1,0 +1,49 @@
+executives {
+  id: "1"
+  name: "Abhishek Men"
+  role: "President"
+  image: "assets/executives/Abhishek-Menon.jpg"
+  linkedin: "https://www.linkedin.com/in/abhishekmenon84/"
+}
+executives {
+  id: "2"
+  name: "Harmeet Kaur"
+  role: "Social Secretary"
+  image: "assets/executives/Harmeet-Kaur.jpg"
+  linkedin: ""
+}
+executives {
+  id: "3"
+  name: "Uthira Kumar Ponnusamy"
+  role: "Secretary"
+  image: "assets/executives/Uthira-Kumar-Ponnusamy.jpg"
+  linkedin: "https://www.linkedin.com/in/uthira-kumar-p-78108670/"
+}
+executives {
+  id: "4"
+  name: "Manisha Verma"
+  role: "Board of Director"
+  image: "assets/executives/Manisha-Verma.jpg"
+  linkedin: "https://www.linkedin.com/in/manisha-varma-052b2710/"
+}
+executives {
+  id: "5"
+  name: "Dr. Rakesh Mishra"
+  role: "Board of Director"
+  image: "assets/executives/Rakesh-Mishra.jpg"
+  linkedin: "https://www.linkedin.com/in/rakesh-mishra-phd/"
+}
+executives {
+  id: "6"
+  name: "Mathuresh Singh"
+  role: "Board of Director"
+  image: "assets/executives/Mathuresh-Singh.jpg"
+  linkedin: "https://www.linkedin.com/in/mathuresh-singh-b631b519/"
+}
+executives {
+  id: "7"
+  name: "Dr. Ram Prakash Galwa"
+  role: "Past President"
+  image: "assets/executives/Dr-Ram-Prakash-Galwa.jpg"
+  linkedin: ""
+}

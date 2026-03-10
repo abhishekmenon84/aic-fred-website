@@ -1,0 +1,7 @@
+# Currently no past events, but uses events.proto schema.
+# Add events as formatted:
+# events {
+#   id: 1
+#   title: "Past Event Example"
+#   ...
+# }
